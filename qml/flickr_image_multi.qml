@@ -1,0 +1,1 @@
+flickr_image_single.qml
