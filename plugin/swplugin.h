@@ -33,7 +33,6 @@ public:
 
 signals:
     void ServiceChanged(QString serviceName);
-    void ShareProgress(const QString &service, int opid, int progress, const QString &message);
 
 private slots:
     void onServiceShareProgress(QString serviceName, int opid, int progress, QString message);
