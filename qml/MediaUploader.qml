@@ -54,6 +54,10 @@ Item {
         font.family: theme_fontFamily
         color: theme_fontColorNormal
 
+        width: parent.width
+        wrapMode: Text.Wrap
+        horizontalAlignment: Text.AlignHCenter
+
         anchors {
             top: parent.top
             horizontalCenter: parent.horizontalCenter
@@ -67,6 +71,10 @@ Item {
         font.pixelSize: theme_fontPixelSizeNormal
         font.family: theme_fontFamily
         color: theme_fontColorNormal
+
+        width: parent.width
+        wrapMode: Text.Wrap
+        horizontalAlignment: Text.AlignHCenter
 
         anchors {
             top: titleText.bottom
@@ -140,6 +148,9 @@ Item {
         font.pixelSize: theme_fontPixelSizeNormal
         font.family: theme_fontFamily
         color: theme_fontColorNormal
+
+        width: parent.width
+        wrapMode: Text.Wrap
 
         anchors {
             top: repFields.bottom

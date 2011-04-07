@@ -46,6 +46,10 @@ Item  {
         font.family: theme_fontFamily
         color: theme_fontColorNormal
 
+        width: parent.width
+        wrapMode: Text.Wrap
+        horizontalAlignment: Text.AlignHCenter
+
         anchors {
             top: parent.top
             horizontalCenter: parent.horizontalCenter
@@ -61,6 +65,9 @@ Item  {
         font.pixelSize: theme_fontPixelSizeMedium
         font.family: theme_fontFamily
         color: theme_fontColorNormal
+
+        width: parent.width
+        wrapMode: Text.Wrap
 
         anchors {
             top: titleText.bottom

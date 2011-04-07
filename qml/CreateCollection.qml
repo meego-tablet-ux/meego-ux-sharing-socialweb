@@ -15,7 +15,7 @@ Item  {
 
     anchors.centerIn: parent
 
-    height: 210
+    height: 0
     width: 330
 
     state: "idle"
@@ -43,6 +43,10 @@ Item  {
         font.family: theme_fontFamily
         color: theme_fontColorNormal
 
+        width: parent.width
+        wrapMode: Text.Wrap
+        horizontalAlignment: Text.AlignHCenter
+
         anchors {
             top: parent.top
             horizontalCenter: parent.horizontalCenter
@@ -58,6 +62,9 @@ Item  {
         font.pixelSize: theme_fontPixelSizeMedium
         font.family: theme_fontFamily
         color: theme_fontColorNormal
+
+        width: parent.width
+        wrapMode: Text.Wrap
 
         anchors {
             top: titleText.bottom
@@ -121,6 +128,7 @@ Item  {
             id: createButton
 
             width: 130
+            height: 42  // FIXME: Hardcoded.
 
             anchors.bottom: parent.bottom
 
@@ -144,6 +152,7 @@ Item  {
             title: qsTr("Cancel")
 
             width: createButton.width
+            height: createButton.height
 
             anchors {
                 bottom: parent.bottom
@@ -242,5 +251,8 @@ Item  {
     Component.onCompleted: {
         // Display initial data.
         changeTitle();
+
+        if (createCollection.height == 0)
+            createCollection.height = childrenRect.height + defaultMargin
     }
 }
