@@ -1,4 +1,4 @@
-VERSION=0.2.1
+VERSION=0.2.2
 #CONFIG += debug
 
 PROJECT_NAME = meego-ux-sharing-socialweb
