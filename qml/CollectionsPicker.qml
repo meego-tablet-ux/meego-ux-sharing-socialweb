@@ -16,7 +16,7 @@ Item  {
     anchors.centerIn: parent
 
     height: 450
-    width: 330
+    width: childrenRect.width + (defaultMargin * 2)
 
     state: "loading"
 
@@ -181,8 +181,6 @@ Item  {
         Button {
             id: applyButton
 
-            width: 110
-
             anchors.bottom: parent.bottom
 
             title: qsTr("Add a title")
@@ -205,8 +203,6 @@ Item  {
             id: cancelButton
 
             title: qsTr("Cancel")
-
-            width: applyButton.width
 
             anchors {
                 bottom: parent.bottom

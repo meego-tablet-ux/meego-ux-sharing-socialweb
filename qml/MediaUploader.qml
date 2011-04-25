@@ -174,7 +174,6 @@ Item {
         Button {
             id: uploadButton
 
-            width: 130
             height: 42  // FIXME: Hardcoded.
 
             anchors.bottom: parent.bottom
@@ -215,8 +214,6 @@ Item {
 
         Button {
             id: cancelButton
-
-            width: uploadButton.width
 
             title: qsTr("Cancel")
 

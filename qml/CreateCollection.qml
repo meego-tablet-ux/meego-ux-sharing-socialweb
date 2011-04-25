@@ -16,7 +16,7 @@ Item  {
     anchors.centerIn: parent
 
     height: 0
-    width: 330
+    width: childrenRect.width + (defaultMargin * 2)
 
     state: "idle"
 
@@ -127,7 +127,6 @@ Item  {
         Button {
             id: createButton
 
-            width: 130
             height: 42  // FIXME: Hardcoded.
 
             anchors.bottom: parent.bottom
@@ -151,7 +150,6 @@ Item  {
 
             title: qsTr("Cancel")
 
-            width: createButton.width
             height: createButton.height
 
             anchors {
