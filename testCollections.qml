@@ -13,9 +13,9 @@ Rectangle {
     Collections {
         id: colls
         serviceName: "smugmug"
-	Component.onCompleted: {
-	    console.log("Supports collections: " + colls.hasCollections);
-	}
+        Component.onCompleted: {
+            console.log("Supports collections: " + colls.hasCollections);
+        }
     }
 
     Rectangle {
@@ -77,7 +77,7 @@ Rectangle {
     }
     Button {
         id: btnAdd
-        title: "Add Collection"
+        title: "Add collection"
         anchors.top: rectLV.bottom
         anchors.topMargin: 5
         onClicked: {

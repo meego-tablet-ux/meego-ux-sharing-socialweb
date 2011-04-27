@@ -141,7 +141,7 @@ Item  {
                 if (ret)
                     createCollection.state = "creating"
                 else
-                    creationError(qsTr("Collection Creation: General Error"))
+                    creationError(qsTr("Collection creation: General error"))
             }
         }
 
@@ -228,7 +228,7 @@ Item  {
             if (!error)
                 createCollection.collectionCreated(collectionName.text)
             else
-                creationError(qsTr("Collection Creation: General Error"))
+                creationError(qsTr("Collection creation: General error"))
         }
     }
 

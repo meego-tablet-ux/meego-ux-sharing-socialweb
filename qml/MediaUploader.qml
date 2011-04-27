@@ -29,7 +29,7 @@ Item {
     property int defaultMargin: 15
     property int defaultHeight//: height
     property int defaultWidth: width
-    property string selectedCollection: qsTr("No Album")
+    property string selectedCollection: qsTr("No album")
 
     // Signal to notify that the user has cancelled the operation.
     signal cancel()

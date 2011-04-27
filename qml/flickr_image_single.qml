@@ -52,7 +52,7 @@ MediaUploader {
             }
 
             Text {
-                text: qsTr("Only You (private)")
+                text: qsTr("Only you (private)")
 
                 font.pixelSize: theme_fontPixelSizeLarge
                 font.family: theme_fontFamily
@@ -82,7 +82,7 @@ MediaUploader {
             }
 
             Text {
-                text: qsTr("Your Friends")
+                text: qsTr("Your friends")
 
                 font.pixelSize: theme_fontPixelSizeLarge
                 font.family: theme_fontFamily
@@ -114,7 +114,7 @@ MediaUploader {
             }
 
             Text {
-                text: qsTr("Your Family")
+                text: qsTr("Your family")
 
                 font.pixelSize: theme_fontPixelSizeLarge
                 font.family: theme_fontFamily
