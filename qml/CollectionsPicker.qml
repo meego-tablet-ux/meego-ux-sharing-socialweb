@@ -7,7 +7,8 @@
  */
 
 import Qt 4.7
-import MeeGo.Labs.Components 0.1
+import MeeGo.Labs.Components 0.1 as Labs
+import MeeGo.Components 0.1
 import MeeGo.Sharing 0.1
 
 Item  {
@@ -130,7 +131,7 @@ Item  {
             }
         }
 
-        Spinner {
+        Labs.Spinner {
             id: spinner
 
             visible: collectionsPicker.isLoading
@@ -161,7 +162,7 @@ Item  {
             margins: defaultMargin
         }
 
-        title: qsTr("Add a new album")
+        text: qsTr("Add a new album")
 
         onClicked: collectionsPicker.state = "create"
     }
@@ -183,7 +184,7 @@ Item  {
 
             anchors.bottom: parent.bottom
 
-            title: qsTr("Add a title")
+            text: qsTr("Add a title")
 
             active: false
 
@@ -202,7 +203,7 @@ Item  {
         Button {
             id: cancelButton
 
-            title: qsTr("Cancel")
+            text: qsTr("Cancel")
 
             anchors {
                 bottom: parent.bottom

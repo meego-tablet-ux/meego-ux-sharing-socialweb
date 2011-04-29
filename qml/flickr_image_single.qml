@@ -7,7 +7,7 @@
  */
 
 import Qt 4.7
-import MeeGo.Labs.Components 0.1
+import MeeGo.Labs.Components 0.1 as Labs
 
 MediaUploader {
     width: 330
@@ -36,11 +36,11 @@ MediaUploader {
             height: childrenRect.height
             width: childrenRect.width
 
-            RadioGroup {
+            Labs.RadioGroup {
                 id: privacyGroup
             }
 
-            RadioButton {
+            Labs.RadioButton {
                 id: privateRadio
 
                 group: privacyGroup
@@ -65,7 +65,7 @@ MediaUploader {
                 }
             }
 
-            CheckBox {
+            Labs.CheckBox {
                 id: friends
 
                 anchors {
@@ -96,7 +96,7 @@ MediaUploader {
                 }
             }
 
-            CheckBox {
+            Labs.CheckBox {
                 id: family
 
                 anchors {
@@ -128,7 +128,7 @@ MediaUploader {
                 }
             }
 
-            RadioButton {
+            Labs.RadioButton {
                 id: publicRadio
 
                 group: privacyGroup

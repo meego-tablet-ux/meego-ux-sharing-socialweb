@@ -7,7 +7,8 @@
  */
 
 import Qt 4.7
-import MeeGo.Labs.Components 0.1
+import MeeGo.Labs.Components 0.1 as Labs
+import MeeGo.Components 0.1
 import MeeGo.Sharing 0.1
 
 Item  {
@@ -73,7 +74,7 @@ Item  {
         }
     }
 
-    Spinner {
+    Labs.Spinner {
         id: spinner
 
         visible: false
@@ -131,7 +132,7 @@ Item  {
 
             anchors.bottom: parent.bottom
 
-            title: qsTr("Create album")
+            text: qsTr("Create album")
 
             active: false
 
@@ -148,7 +149,7 @@ Item  {
         Button {
             id: cancelButton
 
-            title: qsTr("Cancel")
+            text: qsTr("Cancel")
 
             height: createButton.height
 

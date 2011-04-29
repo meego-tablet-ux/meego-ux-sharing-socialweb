@@ -7,7 +7,7 @@
  */
 
 import Qt 4.7
-import MeeGo.Labs.Components 0.1
+import MeeGo.Components 0.1
 import MeeGo.Sharing 0.1
 
 Item {
@@ -215,7 +215,7 @@ Item {
         Button {
             id: cancelButton
 
-            title: qsTr("Cancel")
+            text: qsTr("Cancel")
 
             anchors {
                 bottom: parent.bottom
@@ -295,9 +295,9 @@ Item {
 
         // Update the upload button title.
         if (refreshData.counter == sharingObj.fileCount - 1)
-            uploadButton.title = qsTr("Upload");
+            uploadButton.text = qsTr("Upload");
         else
-            uploadButton.title = qsTr("Next");
+            uploadButton.text = qsTr("Next");
     }
 
     // Creates the CollectionPicker component.
