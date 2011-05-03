@@ -1,5 +1,5 @@
 import Qt 4.7
-import MeeGo.Labs.Components 0.1
+import MeeGo.Components 0.1
 import MeeGo.Sharing.plugins.socialweb 0.1
 
 
@@ -77,7 +77,7 @@ Rectangle {
     }
     Button {
         id: btnAdd
-        title: "Add collection"
+        text: "Add collection"
         anchors.top: rectLV.bottom
         anchors.topMargin: 5
         onClicked: {
