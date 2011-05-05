@@ -10,7 +10,7 @@ import Qt 4.7
 import MeeGo.Labs.Components 0.1
 
 MediaUploader {
-    width: 330
+    defaultWidth: childrenRect.width
 
     service: "Flickr"
 
