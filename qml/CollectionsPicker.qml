@@ -8,6 +8,7 @@
 
 import Qt 4.7
 import MeeGo.Components 0.1
+import Qt.labs.gestures 2.0
 import MeeGo.Sharing 0.1
 
 Item  {
@@ -123,13 +124,15 @@ Item  {
                 }
             }
 
-            MouseArea {
+            GestureArea {
                 anchors.fill: parent
 
-                onClicked: {
-                    collectionsList.currentIndex = model.index
-                    collectionsPicker.currentCollectionObj = collObj
-                    applyButton.active = true
+                Tap {
+                    onFinished: {
+                        collectionsList.currentIndex = model.index
+                        collectionsPicker.currentCollectionObj = collObj
+                        applyButton.active = true
+                    }
                 }
             }
         }
