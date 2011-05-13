@@ -27,6 +27,10 @@ MediaUploader {
 
     customContent: privacy
 
+    Theme {
+        id: theme
+    }
+
     Component {
         id: privacy
 
@@ -52,9 +56,9 @@ MediaUploader {
             Text {
                 text: qsTr("Only you (private)")
 
-                font.pixelSize: theme_fontPixelSizeLarge
-                font.family: theme_fontFamily
-                color: theme_fontColorNormal
+                font.pixelSize: theme.fontPixelSizeLarge
+                font.family: theme.fontFamily
+                color: theme.fontColorNormal
 
                 anchors {
                     left: privateRadio.right
@@ -82,9 +86,9 @@ MediaUploader {
             Text {
                 text: qsTr("Your friends")
 
-                font.pixelSize: theme_fontPixelSizeLarge
-                font.family: theme_fontFamily
-                color: theme_fontColorNormal
+                font.pixelSize: theme.fontPixelSizeLarge
+                font.family: theme.fontFamily
+                color: theme.fontColorNormal
 
                 anchors {
                     left: friends.right
@@ -114,9 +118,9 @@ MediaUploader {
             Text {
                 text: qsTr("Your family")
 
-                font.pixelSize: theme_fontPixelSizeLarge
-                font.family: theme_fontFamily
-                color: theme_fontColorNormal
+                font.pixelSize: theme.fontPixelSizeLarge
+                font.family: theme.fontFamily
+                color: theme.fontColorNormal
 
                 anchors {
                     left: family.right
@@ -148,9 +152,9 @@ MediaUploader {
             Text {
                 text: qsTr("Anyone (public)")
 
-                font.pixelSize: theme_fontPixelSizeLarge
-                font.family: theme_fontFamily
-                color: theme_fontColorNormal
+                font.pixelSize: theme.fontPixelSizeLarge
+                font.family: theme.fontFamily
+                color: theme.fontColorNormal
 
                 anchors {
                     left: publicRadio.right

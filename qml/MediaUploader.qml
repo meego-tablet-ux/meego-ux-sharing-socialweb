@@ -47,12 +47,16 @@ Item {
         catalog: "meego-ux-sharing-socialweb-qml"
     }
 
+    Theme {
+        id: theme
+    }
+
     Text {
         id: titleText
 
-        font.pixelSize: theme_fontPixelSizeLarge
-        font.family: theme_fontFamily
-        color: theme_fontColorNormal
+        font.pixelSize: theme.fontPixelSizeLarge
+        font.family: theme.fontFamily
+        color: theme.fontColorNormal
 
         width: parent.width
         wrapMode: Text.Wrap
@@ -68,9 +72,9 @@ Item {
     Text {
         id: imageCounter
 
-        font.pixelSize: theme_fontPixelSizeNormal
-        font.family: theme_fontFamily
-        color: theme_fontColorNormal
+        font.pixelSize: theme.fontPixelSizeNormal
+        font.family: theme.fontFamily
+        color: theme.fontColorNormal
 
         width: parent.width
         wrapMode: Text.Wrap
@@ -145,9 +149,9 @@ Item {
 
         visible: forceCollection
 
-        font.pixelSize: theme_fontPixelSizeNormal
-        font.family: theme_fontFamily
-        color: theme_fontColorNormal
+        font.pixelSize: theme.fontPixelSizeNormal
+        font.family: theme.fontFamily
+        color: theme.fontColorNormal
 
         width: parent.width
         wrapMode: Text.Wrap

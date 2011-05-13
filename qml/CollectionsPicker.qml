@@ -35,6 +35,10 @@ Item  {
     // Signal to notify a possible error.
     signal collectionError(string errMsg)
 
+    Theme {
+        id: theme
+    }
+
     Translator {
         catalog: "meego-ux-sharing-socialweb-qml"
     }
@@ -42,9 +46,9 @@ Item  {
     Text {
         id: titleText
 
-        font.pixelSize: theme_fontPixelSizeLarge
-        font.family: theme_fontFamily
-        color: theme_fontColorNormal
+        font.pixelSize: theme.fontPixelSizeLarge
+        font.family: theme.fontFamily
+        color: theme.fontColorNormal
 
         width: parent.width
         wrapMode: Text.Wrap
@@ -62,9 +66,9 @@ Item  {
 
         text: qsTr("Choose an album to upload to")
 
-        font.pixelSize: theme_fontPixelSizeMedium
-        font.family: theme_fontFamily
-        color: theme_fontColorNormal
+        font.pixelSize: theme.fontPixelSizeMedium
+        font.family: theme.fontFamily
+        color: theme.fontColorNormal
 
         width: parent.width
         wrapMode: Text.Wrap
@@ -107,9 +111,9 @@ Item  {
             Text {
                 text: collName
 
-                font.pixelSize: theme_fontPixelSizeMediumLarge
-                font.family: theme_fontFamily
-                color: theme_fontColorNormal
+                font.pixelSize: theme.fontPixelSizeMediumLarge
+                font.family: theme.fontFamily
+                color: theme.fontColorNormal
 
                 elide: Text.ElideRight
 

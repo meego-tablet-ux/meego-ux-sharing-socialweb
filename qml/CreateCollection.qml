@@ -36,12 +36,16 @@ Item  {
         catalog: "meego-ux-sharing-socialweb-qml"
     }
 
+    Theme {
+        id: theme
+    }
+
     Text {
         id: titleText
 
-        font.pixelSize: theme_fontPixelSizeLarge
-        font.family: theme_fontFamily
-        color: theme_fontColorNormal
+        font.pixelSize: theme.fontPixelSizeLarge
+        font.family: theme.fontFamily
+        color: theme.fontColorNormal
 
         width: parent.width
         wrapMode: Text.Wrap
@@ -59,9 +63,9 @@ Item  {
 
         text: qsTr("Choose a name for your new album")
 
-        font.pixelSize: theme_fontPixelSizeMedium
-        font.family: theme_fontFamily
-        color: theme_fontColorNormal
+        font.pixelSize: theme.fontPixelSizeMedium
+        font.family: theme.fontFamily
+        color: theme.fontColorNormal
 
         width: parent.width
         wrapMode: Text.Wrap
