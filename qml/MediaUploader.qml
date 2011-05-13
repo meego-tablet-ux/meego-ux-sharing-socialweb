@@ -277,7 +277,7 @@ Item {
 
         // Preview the file.
         if (sharingObj.shareType == MeeGoUXSharingClientQmlObj.ShareTypeVideo)
-            filePreview.source = "image://theme/media/video_thumb_med";
+            filePreview.source = "image://themedimage/images/media/video_thumb_med";
         else if (sharingObj.shareType == MeeGoUXSharingClientQmlObj.ShareTypeImage)
             filePreview.source = sharingObj.filesToShare[refreshData.counter];
 

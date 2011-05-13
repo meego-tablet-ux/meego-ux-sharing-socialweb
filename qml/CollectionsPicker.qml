@@ -103,9 +103,9 @@ Item  {
 
             source: {
                 if (itemSurface.ListView.isCurrentItem)
-                    return "image://theme/media/music_row_highlight_landscape"
+                    return "image://themedimage/images/media/music_row_highlight_landscape"
                 else
-                    return "image://theme/media/music_row_landscape"
+                    return "image://themedimage/images/media/music_row_landscape"
             }
 
             Text {
