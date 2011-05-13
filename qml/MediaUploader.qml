@@ -28,7 +28,7 @@ Item {
     property Item customItem: null
     property int defaultMargin: 15
     property int defaultHeight//: height
-    property int defaultWidth: width
+    property int defaultWidth: childrenRect.width + (defaultMargin * 2)
     property string selectedCollection: qsTr("No album")
 
     // Signal to notify that the user has cancelled the operation.
@@ -173,8 +173,6 @@ Item {
 
         Button {
             id: uploadButton
-
-            height: 42  // FIXME: Hardcoded.
 
             anchors.bottom: parent.bottom
 

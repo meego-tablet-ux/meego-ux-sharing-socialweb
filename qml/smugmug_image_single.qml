@@ -9,8 +9,6 @@
 import Qt 4.7
 
 MediaUploader {
-    width: 330
-
     service: "SmugMug"
     forceCollection: true
 
