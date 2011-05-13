@@ -27,7 +27,7 @@ Item {
     property Component customContent: null
     property Item customItem: null
     property int defaultMargin: 15
-    property int defaultHeight//: height
+    property int defaultHeight: childrenRect.height + (defaultMargin * 2)
     property int defaultWidth: childrenRect.width + (defaultMargin * 2)
     property string selectedCollection: qsTr("No album")
 
