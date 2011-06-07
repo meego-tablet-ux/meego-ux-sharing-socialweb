@@ -126,11 +126,18 @@ QString SwSharingService::GetServiceType()
 QString SwSharingService::GetSettingsURI(const QString &platform,
                                        const QString &product)
 {
-    Q_UNUSED(platform);
-    Q_UNUSED(product);
-    //TODO: this needs to be changed to have platform/product differentiation, but w/o recompiling the plugin...
-//    qDebug() << QString("SwSharingService::GetSettingsURI with mServiceInfo.serviceName of %1!").arg(mServiceInfo.serviceName);
-    return QString("/usr/bin/meego-qml-launcher --app meego-ux-settings --fullscreen --cmd showPage --cdata Socialweb");//,%1").arg(mServiceInfo.serviceName);
+    QString retVal = "";
+
+    if (platform == "MeeGo") {
+        if (product == "UX") {
+            retVal = QString("meego-qml-launcher --opengl --app meego-ux-settings --fullscreen --cmd showPage --cdata \"Web\ Accounts\" ");
+        } else {
+            qDebug() << QString("Invalid product in SwSharingService::GetSettingsURI: %1").arg(product);
+        }
+    } else {
+        qDebug() << QString("Invalid platform in SwSharingService::GetSettingsURI: %1").arg(platform);
+    }
+    return retVal;
 }
 
 QString SwSharingService::GetUIName(const QString &widgettype,
