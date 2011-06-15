@@ -215,6 +215,9 @@ int SwSharingService::Share(const QString &sharetype, ArrayOfShareItemStruct ite
         if (i != -1) {
             mShareOpsMap[mShareID].append(i);
             mShareOpProgressMap[mShareID].append(QPair<int, int>(i, 0));
+        } else {
+            qDebug() << QString ("Got %1 back from upload attempt").arg(i);
+            return i;
         }
     }
 
