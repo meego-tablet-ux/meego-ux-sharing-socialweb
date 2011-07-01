@@ -18,7 +18,7 @@ Item  {
     height: 0
     width: childrenRect.width + (defaultMargin * 2)
 
-    state: "idle"
+    state: ccSnR.value("createCollection_state", "idle")
 
     property string service: sharingObj.serviceName
     property int defaultMargin: 15
@@ -31,6 +31,18 @@ Item  {
 
     // Signal to notify a possible error.
     signal creationError(string errMsg)
+
+    SaveRestoreState {
+        id: ccSnR
+        onSaveRequired: {
+            setValue("createCollection_state", createCollection.state);
+        }
+        Component.onCompleted: {
+            if (restoreRequired) {
+                remove("createCollection_state");
+            }
+        }
+    }
 
     Translator {
         catalog: "meego-ux-sharing-socialweb-qml"

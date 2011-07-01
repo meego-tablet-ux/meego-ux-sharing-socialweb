@@ -19,7 +19,7 @@ Item  {
     height: 450
     width: childrenRect.width + (defaultMargin * 2)
 
-    state: "loading"
+    state: cpSnR.value("collectionsPicker_state", "loading")
 
     property string service: sharingObj.serviceName
     property int defaultMargin: 15
@@ -35,6 +35,18 @@ Item  {
 
     // Signal to notify a possible error.
     signal collectionError(string errMsg)
+
+    SaveRestoreState {
+        id: cpSnR
+	onSaveRequired: {
+	    setValue("collectionsPicker_state", collectionsPicker.state);
+	}
+	Component.onCompleted: {
+	    if (restoreRequired) {
+	        remove("collectionsPicker_state");
+	    }
+	}
+    }
 
     Theme {
         id: theme
@@ -322,4 +334,5 @@ Item  {
         // Display initial data.
         changeTitle();
     }
+
 }

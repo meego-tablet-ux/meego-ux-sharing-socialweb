@@ -18,7 +18,7 @@ Item {
     height: 0
     width: 0
 
-    state: "uploader"
+    state: muSnR.value("mediaUploader_state", "uploader");
 
     property string service: sharingObj.serviceName
     property bool autoUpload: true
@@ -29,7 +29,7 @@ Item {
     property int defaultMargin: 15
     property int defaultHeight: childrenRect.height + (defaultMargin * 2)
     property int defaultWidth: childrenRect.width + (defaultMargin * 2)
-    property string selectedCollection: qsTr("No album")
+    property string selectedCollection: muSnR.value("mediaUploader_selectedCollection", qsTr("No album"))
 
     // Signal to notify that the user has cancelled the operation.
     signal cancel()
@@ -42,6 +42,20 @@ Item {
 
     // Signal to nofify that the share was requested.
     signal shareRequested()
+
+    SaveRestoreState {
+        id: muSnR
+        onSaveRequired: {
+            setValue("mediaUploader_state", mediaUploader.state);
+            setValue("mediaUploader_selectedCollection", mediaUploader.selectedCollection);
+        }
+        Component.onCompleted: {
+	    if (restoreRequired) {
+	        remove("mediaUploader_state");
+	        remove("mediaUploader_selectedCollection");
+	    }
+        }
+    }
 
     Translator {
         catalog: "meego-ux-sharing-socialweb-qml"
